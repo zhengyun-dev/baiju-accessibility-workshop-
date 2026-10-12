@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" preserveAspectRatio="xMidYMid slice">
+  <!-- 青绿山水：山石草木（石青远山 + 月白 + 古铜草木） -->
+  <rect width="400" height="200" fill="#dfeee7"/>
+  <path d="M0 130 L90 70 L160 120 L240 60 L320 125 L400 85 L400 160 L0 160 Z" fill="#2a7f6f" opacity=".7"/>
+  <path d="M0 155 L70 120 L150 150 L230 118 L320 152 L400 130 L400 200 L0 200 Z" fill="#1f5f50" opacity=".85"/>
+  <g stroke="#8a6d3b" stroke-width="2" fill="none" opacity=".8">
+    <path d="M100 150 C 95 130, 110 120, 105 105"/>
+    <path d="M300 150 C 305 128, 290 118, 296 100"/>
+  </g>
+  <g fill="#2a7f6f" opacity=".9">
+    <ellipse cx="105" cy="100" rx="6" ry="12" transform="rotate(20 105 100)"/>
+    <ellipse cx="100" cy="115" rx="6" ry="12" transform="rotate(-25 100 115)"/>
+    <ellipse cx="296" cy="96" rx="6" ry="12" transform="rotate(20 296 96)"/>
+  </g>
+</svg>

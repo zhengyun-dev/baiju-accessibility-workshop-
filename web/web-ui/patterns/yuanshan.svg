@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" preserveAspectRatio="xMidYMid slice">
+  <!-- 远山黛水：水墨山水（黑/灰远山 + 留白） -->
+  <rect width="400" height="200" fill="#e8e3d8"/>
+  <path d="M0 120 L60 80 L110 110 L170 60 L230 105 L300 70 L360 115 L400 95 L400 160 L0 160 Z" fill="#4a4a4a" opacity=".55"/>
+  <path d="M0 140 L80 110 L140 135 L210 100 L290 140 L360 118 L400 138 L400 180 L0 180 Z" fill="#2c2c2c" opacity=".75"/>
+  <path d="M0 165 L100 145 L180 168 L260 148 L400 170 L400 200 L0 200 Z" fill="#14100d" opacity=".9"/>
+  <circle cx="320" cy="45" r="18" fill="#c96f5a" opacity=".5"/>
+</svg>

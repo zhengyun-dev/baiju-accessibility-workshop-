@@ -1,0 +1,27 @@
+# ② translate-to-plain · Agnes 模型真实调用铁证
+# 抓取日期: 2026-10-08 | 执行: AGH CLI local-dev profile, 模型 agnes-3.0-flash
+# 关键证据: 终端显示 "- tool skill_read · ok"（Agnes 激活了 translate-to-plain Skill 才生成，非凭记忆硬答）
+
+## 执行命令
+node packages/cli/dist/local/agnes.mjs -p "请使用 translate-to-plain 把下面这段南京白局唱词《机房苦》逐句翻译成普通话白话，每行一句，方言词在句末加（存疑：原词）：
+机房啊不好做 / 这几天又被那坐板疮来磨啊 / 三万六千头儿缎 / 老板叫我七天织一个 / 怎奈我疼痛一天只能绞上几十梭 / 那焦头鸡的老板还要天天催生活"
+
+## Agnes 输出（translator = agnes-3.0-flash，sentenceCount = 6）
+{
+  "translator": "agnes-3.0-flash",
+  "sentenceCount": 6,
+  "translated": [
+    { "sentence": "机房啊不好做", "plain": "机房里的工作不好干啊", "translator": "agnes-3.0-flash" },
+    { "sentence": "这几天又被那坐板疮来磨啊", "plain": "这几天又被那坐板疮折磨得难受啊（存疑：坐板疮）", "translator": "agnes-3.0-flash" },
+    { "sentence": "三万六千头儿缎", "plain": "三万六千个头儿的缎子", "translator": "agnes-3.0-flash" },
+    { "sentence": "老板叫我七天织一个", "plain": "老板叫我七天织出一个", "translator": "agnes-3.0-flash" },
+    { "sentence": "怎奈我疼痛一天只能绞上几十梭", "plain": "无奈我疼得厉害，一天只能织上几十梭", "translator": "agnes-3.0-flash" },
+    { "sentence": "那焦头鸡的老板还要天天催生活", "plain": "那焦头鸡的老板还要天天催着干活（存疑：焦头鸡）（存疑：生活）", "translator": "agnes-3.0-flash" }
+  ]
+}
+
+## 验收
+- [x] 逐句覆盖率 100%（原文 6 句 → 译文 6 句，行数一致）
+- [x] 存疑标注齐全（坐板疮、焦头鸡、生活 均标"存疑"，无硬译/瞎猜）
+- [x] Agnes 真实调用（终端 Trace 显示 "- tool skill_read" = 激活了 Skill）
+- 观察: "机房/焦头鸡" 未标存疑，属 Agnes 判断（"机房"是通用词；"焦头鸡"它按南京话保留原字未展开，未编造释义，符合 3.4 不硬译）

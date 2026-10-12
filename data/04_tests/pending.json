@@ -1,0 +1,43 @@
+{
+  "note": "存疑反馈分支：② translate-to-plain 标出的（存疑：X）词进这里，人工补来源后回填 dialect_words_supplement.md 并销项。合规 3.4：没来源标'待考'，不硬编。",
+  "items": [
+    {
+      "word": "坐板疮",
+      "in": "c05 机房苦「这几天又被那坐板疮来磨啊」",
+      "provisional": "坐骨/臀部湿疹（织机房久坐易得）",
+      "status": "resolved",
+      "resolvedDate": "2026-10-08",
+      "sourceUrl": "（白局唱词语境推断，非独立公开来源；已并入 DIALECT_WORDS，词源如需学术佐证待补）"
+    },
+    {
+      "word": "焦头鸡",
+      "in": "c05 机房苦「那焦头鸡的老板还要天天催生活」",
+      "provisional": "形容老板难缠/厉害（南京话，Agnes 保留原字未展开）",
+      "status": "pending",
+      "note": "Agnes 未硬译；词源待考，需公开来源佐证"
+    },
+    {
+      "word": "生活（活计）",
+      "in": "c05 机房苦「催生活」= 催干活/催交活计",
+      "provisional": "活计/活儿（南京话'生活'指干活）",
+      "status": "pending",
+      "note": "南京话'生活'作'活计'义，需公开来源佐证"
+    },
+    {
+      "word": "削灵",
+      "in": "c05 机房苦「切的削灵有纸薄」",
+      "provisional": "薄/锋利（词源 待考）",
+      "status": "pending"
+    },
+    {
+      "word": "靸",
+      "in": "c05 机房苦「我靸了一双烂鞋头儿」",
+      "provisional": "拖/趿拉（词源 待考）",
+      "status": "pending"
+    }
+  ],
+  "harmonyWords": {
+    "note": "歇后语谐音双关词，本意游客可懂，单列 harmony 不计难词，不进 pending。",
+    "words": ["针好（=真好）", "顶好（=最好）"]
+  }
+}

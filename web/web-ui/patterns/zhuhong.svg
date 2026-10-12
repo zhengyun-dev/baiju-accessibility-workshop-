@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" preserveAspectRatio="xMidYMid slice">
+  <!-- 朱红金辉：织锦回纹（故宫红 + 暗金回字纹） -->
+  <rect width="400" height="200" fill="#8b2a1a"/>
+  <g stroke="#c9a86a" stroke-width="3" fill="none">
+    <path d="M20 40 h120 v120 h-120 z"/>
+    <path d="M40 60 h80 v80 h-80 z"/>
+    <path d="M60 80 h40 v40 h-40 z"/>
+    <path d="M260 40 h120 v120 h-120 z"/>
+    <path d="M280 60 h80 v80 h-80 z"/>
+    <path d="M300 80 h40 v40 h-40 z"/>
+  </g>
+</svg>

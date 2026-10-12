@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" preserveAspectRatio="xMidYMid slice">
+  <!-- 黛蓝雅韵：缠枝莲纹（靛青底 + 藤蔓缠枝） -->
+  <rect width="400" height="200" fill="#1e3a5f"/>
+  <g stroke="#d9c08a" stroke-width="2.5" fill="none" opacity=".8">
+    <path d="M20 100 C 80 40, 140 40, 200 100 S 320 160, 380 100"/>
+    <path d="M20 100 C 80 160, 140 160, 200 100 S 320 40, 380 100"/>
+  </g>
+  <g fill="#e8dcc0" opacity=".85">
+    <circle cx="200" cy="100" r="14"/>
+    <ellipse cx="170" cy="80" rx="8" ry="14" transform="rotate(-30 170 80)"/>
+    <ellipse cx="230" cy="80" rx="8" ry="14" transform="rotate(30 230 80)"/>
+    <ellipse cx="170" cy="120" rx="8" ry="14" transform="rotate(30 170 120)"/>
+    <ellipse cx="230" cy="120" rx="8" ry="14" transform="rotate(-30 230 120)"/>
+    <circle cx="200" cy="100" r="5" fill="#1e3a5f"/>
+  </g>
+</svg>

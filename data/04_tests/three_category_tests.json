@@ -1,0 +1,41 @@
+{
+  "normal": {
+    "input": "c05 机房苦（正常唱词）",
+    "sentenceCount": 34,
+    "metric_readability": {
+      "originalHardRate": "3.3%",
+      "plainHardRate": "0.4%",
+      "drop": "87.9%",
+      "pass": "yes"
+    },
+    "expect": "全链路正常，难词率下降 >50%"
+  },
+  "boundary": {
+    "input": "草帽么得边儿——顶好（歇后语谐音双关）",
+    "metric_readability": {
+      "originalHardRate": "12.5%",
+      "plainHardRate": "0%",
+      "harmony": 1,
+      "hardWords": [
+        "么得"
+      ]
+    },
+    "expect": "\"顶好\" 进 harmony（谐音双关不计难词），原文难词≈0（\"么得\"是方言词算难词）"
+  },
+  "failed": {
+    "input": "③ 查不到\"不存在的典故\" + ④ 无来源卡",
+    "verify_sources": {
+      "total": 2,
+      "traceableCount": 1,
+      "traceableRate": "50%"
+    },
+    "不存在的典故": {
+      "topic": "不存在的典故",
+      "source": "(无来源，待考)",
+      "traceable": "no",
+      "urls": [],
+      "note": "无来源，降级\"待考\""
+    },
+    "expect": "\"不存在的典故\" traceable=no + 降级\"待考\"；夫子庙 traceable=yes（b01/b04）；不崩溃"
+  }
+}

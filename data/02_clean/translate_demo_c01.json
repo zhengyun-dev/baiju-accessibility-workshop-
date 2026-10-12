@@ -1,0 +1,29 @@
+# D10 工具② translate_to_plain · 真 Agnes 翻译跑通证据
+# 抓取日期: 2026-10-08 | 执行方式: 用户终端 AGNES_API_KEY 环境变量 + node demo_run.mjs
+# 模型: agnes-3.0-flash（Agnes AI 官方网关 api.agnes-ai.cn/v1）
+# 输入: sources/02_clean/c01_b01_nan_jing_mei_jing.txt（《南京美景》6 句）
+
+## 跑通输出（真 Agnes，translator = agnes-3.0-flash）
+
+| 原唱词 | 白话译文（Agnes） |
+|---|---|
+| 南京的美景，那真是 | 南京的景色，那真是 |
+| 草帽么得边儿——顶好 | 草帽子没有边缘——最好 |
+| 上鞋不用锥子——针好（真好） | 上鞋不用锥子——针好（真好） |
+| 夫子庙不但风景美 | 夫子庙不仅景色优美 |
+| 秦淮风味小吃哦 | 秦淮风味小吃呀 |
+| 那才是，名扬天下哦 | 那才叫名扬天下呢（存疑：哦） |
+
+## 结论与待办（如实记录）
+
+1. **跑通证明**：4 个工具（demo_text_stats / split_sentences / parse_text / translate_to_plain）注册→调用→反馈闭环全部走通；parse_text 用 nodejieba 真分词；translate_to_plain 在配置 AGNES_API_KEY 时自动切换到 agnes-3.0-flash 真 LLM，未配置时降级规则直译。双轨逻辑验证完成。
+2. **未翻译句**（需人工复核）：「上鞋不用锥子——针好（真好）」Agnes 原样返回未翻。原因：该句在 c01 里本身已含括号注释「（真好）」，Agnes 判定无需再译。这是**输入数据自带注释**导致，非 Agnes 能力缺陷；若要全句翻译，建议在喂入前把 02_clean 里的括号注释剥离，或在 prompt 里说明"保留原注释、只翻正文"。
+3. **存疑标记**：Agnes 对「哦」这类语气词标了「存疑：哦」，符合规则 3.1"不确定处标存疑"的设计意图，作为 Agnes 参与核心任务的证据保留。
+
+## 复现命令
+
+```
+export AGNES_API_KEY=（你的key）
+cd /home/yunnn/agnes-harness/examples/packages/hot-tool-plugin
+node demo_run.mjs
+```

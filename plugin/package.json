@@ -1,0 +1,27 @@
+{
+  "name": "@agnes-examples/hot-tool-plugin",
+  "version": "1.0.0",
+  "type": "module",
+  "license": "MIT",
+  "exports": "./index.mjs",
+  "agnes": {
+    "plugins": [
+      {
+        "export": "textStatsTool",
+        "id": "ext:agnes-examples/hot-tool-plugin",
+        "inject": [
+          "extension"
+        ]
+      }
+    ]
+  },
+  "dependencies": {
+    "nodejieba": "3.5.8"
+  },
+  "description": "南京白局·无障碍唱词工坊 —— 5 能力（3 Tool: parse_text/verify_sources/readability_score + 2 Skill 见 ../skills/）。nodejieba 为 ① 分词依赖，可选（未装则降级 char-split，⑤ 子串匹配不受影响）。",
+  "scripts": {
+    "demo": "node demo_all.mjs",
+    "test:3cat": "node test_3categories.mjs",
+    "test:kb": "node test_kb.mjs"
+  }
+}

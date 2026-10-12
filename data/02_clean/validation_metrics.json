@@ -1,0 +1,27 @@
+# 阶段1 硬指标证据文件（生成日期 2026-10-12）
+# 用途：答辩"验证指标"两张表的数据来源。工具：verify_sources ④、readability_score ⑤。
+
+## 指标① 知识卡溯源率（目标 ≥80%）—— 工具④ verify_sources
+样本：全部 10 张知识卡（云锦机房/秦淮河/夫子庙/莫愁湖/金陵四十八景/文德桥 + 朱雀桥/乌衣巷/白鹭洲公园/媚香楼）
+结果：traceableRate = 100%（10/10），pass = yes
+每卡 URL（verify_sources 动态读 sources_manifest.csv）：
+  云锦机房   → https://www.gmw.cn/01gmrb/2007-09/11/content_669203.htm ; https://zhuanlan.zhihu.com/p/601169001
+  秦淮河     → http://epaper.gmw.cn/gmrb/html/2017-05/06/nw.D110000gmrb_20170506_4-04.htm ; https://www.bilibili.com/video/BV13oX6YrEps ; https://www.gmw.cn/01gmrb/2007-09/11/content_669203.htm
+  夫子庙     → http://epaper.gmw.cn/gmrb/html/2017-05/06/nw.D110000gmrb_20170506_4-04.htm ; https://www.bilibili.com/video/BV13oX6YrEps
+  莫愁湖     → https://www.baike.com/wikiid/1550383644694897492
+  金陵四十八景 → https://www.ihchina.cn/project_details/13721/ ; https://www.baike.com/wikiid/1550383644694897492
+  文德桥     → https://www.baike.com/wikiid/1550383644694897492
+  朱雀桥     → https://zh.wikipedia.org/zh-hans/%E6%9C%B1%E9%9B%80%E6%A1%A5
+  乌衣巷     → https://zh.wikipedia.org/zh-hans/%E4%B9%8C%E8%A1%A3%E5%B7%B7
+  白鹭洲公园 → https://zh.wikipedia.org/zh-hans/%E7%99%BD%E9%B9%8E%E6%B4%8E%E5%85%AC%E5%9B%AD
+  媚香楼     → https://zh.wikipedia.org/zh-hans/%E8%93%9C%E9%A6%99%E6%A8%82
+
+## 指标② 难词率下降（目标 白话版 < 原文50%，即下降 >50%）—— 工具⑤ readability_score
+难词定义：命中南京方言词表 DIALECT_WORDS（21 词）的词；歇后语谐音双关词（针好/顶好）单列不计。
+判定用子串匹配（不靠 jieba 切词，jieba 会把方言词切碎）。
+
+### 机房苦(c05)
+原文难词率 5.6% → 白话 0%（下降 100%），命中：坐板疮 / 削灵 / 烂鞋头儿 / 靸
+### 金陵游(c06)
+原文难词率 9.8% → 白话 2.6%（下降 73.5%），命中：十里秦淮 / 乖乖咙地咚 / 来斯 / 呱呱叫 / 马头墙
+两组均 pass = yes。

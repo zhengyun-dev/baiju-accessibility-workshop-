@@ -1,0 +1,34 @@
+# ③ gen-knowledge-cards · Agnes 模型真实调用铁证
+# 抓取日期: 2026-10-08 | 执行: AGH CLI local-dev profile, 模型 agnes-3.0-flash
+# 关键证据: 终端显示 "- tool skill_read" + "- tool read"（Agnes 激活 Skill 且真读了知识库文件 nanjing_landmarks.md 再匹配，非凭记忆）
+
+## 执行命令
+node packages/cli/dist/local/agnes.mjs -p "请使用 gen-knowledge-cards，以 sources/knowledge_base/nanjing_landmarks.md 为知识库，对关键词 [夫子庙, 秦淮, 朱雀桥, 乌衣巷] 生成带来源 URL 的知识卡。无命中项返回 miss、不要编造。"
+
+## Agnes 匹配过程（逐关键词检索）
+- 夫子庙 → 「## 夫子庙」块，来源 b01；b04（B 站）
+- 秦淮  → 「## 秦淮河」块，来源 b01；b04；k04
+- 朱雀桥 → 「## 朱雀桥」块，来源 https://zh.wikipedia.org/zh-hans/朱雀桥
+- 乌衣巷 → 「## 乌衣巷」块，来源 https://zh.wikipedia.org/zh-hans/乌衣巷
+
+## Agnes 输出（totalKeywords=4, hitKeywords=4，4/4 全命中，无 miss）
+{
+  "totalKeywords": 4,
+  "hitKeywords": 4,
+  "cards": [
+    { "keyword": "夫子庙", "cardCount": 1, "status": "hit",
+      "cards": [ { "topic": "夫子庙", "intro": "白局唱词《南京美景》唱\"夫子庙不但风景美，秦淮风味小吃哦——那才是名扬天下哦\"。…", "source": "b01（中国青年网/光明日报）；b04（B 站 BV13oX6YrEps）" } ] },
+    { "keyword": "秦淮", "cardCount": 1, "status": "hit",
+      "cards": [ { "topic": "秦淮河", "intro": "白局演唱内容涉及秦淮美食、金陵美景…k04 记载\"秦淮河边机户云集\"…", "source": "b01（中国青年网/光明日报）；b04（B 站）；k04（光明日报 2007）" } ] },
+    { "keyword": "朱雀桥", "cardCount": 1, "status": "hit",
+      "cards": [ { "topic": "朱雀桥（六朝秦淮浮桥）", "intro": "朱雀桥又名朱雀航、南津大桥，是六朝建康城正南门跨越秦淮河的大型浮桥…（完整 6 行史实）…", "source": "https://zh.wikipedia.org/zh-hans/朱雀桥" } ] },
+    { "keyword": "乌衣巷", "cardCount": 1, "status": "hit",
+      "cards": [ { "topic": "乌衣巷（东晋高门士族聚居地）", "intro": "乌衣巷位于南京秦淮河南岸，原为东吴乌衣营驻地…唐刘禹锡《乌衣巷》…", "source": "https://zh.wikipedia.org/zh-hans/乌衣巷" } ] }
+  ]
+}
+
+## 验收
+- [x] 卡片全部带来源 URL（维基 URL + b01/b04/k04 编号）
+- [x] 夫子庙/秦淮/朱雀桥/乌衣巷 4/4 命中
+- [x] 未命中不编造（本次 4 词全 hit，无 miss 项；机制上 miss 返回空，不臆造典故）
+- [x] Agnes 真实调用（终端 Trace 显示 "- tool skill_read" + "- tool read" = 激活 Skill + 真读知识库）

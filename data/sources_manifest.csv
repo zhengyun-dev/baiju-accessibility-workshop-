@@ -1,0 +1,22 @@
+编号,标题,来源URL,内容类型,状态,抓取日期,备注
+b01,南京白局：唱出一座老城的腔调（含唱词片段）,http://news.youth.cn/jsxw/201705/t20170506_9678165.htm,唱词,已抓取,2026-10-08,中国青年网原页面编码损坏（GBK乱码），正文改从其原始来源「光明日报电子版 2017-05-06 第04版」获取：http://epaper.gmw.cn/gmrb/html/2017-05/06/nw.D110000gmrb_20170506_4-04.htm ；文件：sources/01_raw/b01_youth_2017.txt
+b02,600岁南京白局的AI融合秀（新编曲目唱词）,https://www.yangtse.com/news/jiangsu/nanjing/202609/t20260905_389800.html,唱词,已抓取,2026-10-08,紫牛新闻；文件：sources/01_raw/b02_yangtse_2026.txt
+b03,名师带徒工程系列报道9（南京晨报PDF）,http://doss.xhby.net/zpaper/njcb/pc/att/202112/17/2b9b734c-a0dd-4228-bc82-4397260791f5.pdf,唱词+背景,已抓取,2026-10-08,用户浏览器手动复制PDF正文；文件：sources/01_raw/b03_njcb_2021.txt
+k01,南京白局项目页（非遗档案）,https://www.ihchina.cn/project_details/13721/,背景,已抓取,2026-10-08,中国非遗网；文件：sources/03_knowledge/k01_ihchina_nanjingbaiju.txt
+k02,百科·南京白局词条,https://m.baike.com/wiki/%E5%8D%97%E4%BA%AC%E7%99%BD%E5%B1%80/885087,背景,已抓取,2026-10-08,快懂百科词条（正文经 https://www.baike.com/wikiid/1550383644694897492 获取），用户手动复制；文件：sources/03_knowledge/k02_baike_baiju.txt
+k03,南京5人入选第六批国家级非遗代表性传承人,https://www.nanjing.gov.cn/njxx/202503/t20250318_5097327.html,背景,已抓取,2026-10-08,南京市政府官网；文件：sources/03_knowledge/k03_nanjinggov_2025.txt
+k04,白局云锦永不分家（光明日报 2007），https://www.gmw.cn/01gmrb/2007-09/11/content_669203.htm,背景,已抓取,2026-10-08,光明日报 2007-09-11；原链接跳转 presslib.gmw.cn 历史库需登录，正文由用户浏览器手动复制；覆盖“白局与云锦关系”“白摆一局”得名、600年沉浮史；文件：sources/03_knowledge/k04_gmrb_2007.txt
+k05,南京白局——历史渊源、艺术特点、曲牌类型与传承意义（知乎专栏）,https://zhuanlan.zhihu.com/p/601169001,背景,已抓取,2026-10-08,知乎专栏文章（反爬无法直接 GET），用户手动复制；文件：sources/03_knowledge/k05_zhihu_baiju.txt
+b04,南京白局《我的家乡在南京》片段（B站视频字幕全抄）,https://www.bilibili.com/video/BV13oX6YrEps,唱词,已抓取,2026-10-08,B站·网吧杂儿频道；完整滚动字幕由用户逐帧抄录（按时间轴顺序），已补全；B站反爬无法 GET，字幕经用户手动抄出留痕；文件：sources/01_raw/b04_bilibili_2026.txt
+b05,南京白局《机房苦》（B站字幕全抄）,https://www.bilibili.com/video/BV1rC4y1c7GC,唱词,已抓取,2026-10-08,B站·余音戏小筑 南京白局合集（3:56:24）；《机房苦》唱词全文由用户手动复制字幕；B站反爬无法 GET，字幕经用户手动抄出留痕；文件：sources/01_raw/b05_bili_jifangk.txt
+c01,02_clean 南京美景（逐句一行）,http://epaper.gmw.cn/gmrb/html/2017-05/06/nw.D110000gmrb_20170506_4-04.htm,唱词·清洗对齐,已生成,2026-10-08,自 b01 拆出；文件：sources/02_clean/c01_b01_nan_jing_mei_jing.txt
+c02,02_clean 说好六千给一万（逐句一行）,https://www.yangtse.com/news/jiangsu/nanjing/202609/t20260905_389800.html,唱词·清洗对齐,已生成,2026-10-08,自 b02 拆出；文件：sources/02_clean/c02_b02_shuo_hao_liu_qian.txt
+c03,02_clean 智斗鼠崔三引子（逐句一行·非完整）,http://doss.xhby.net/zpaper/njcb/pc/att/202112/17/2b9b734c-a0dd-4228-bc82-4397260791f5.pdf,唱词·清洗对齐（引文截取）,已生成,2026-10-08,自 b03 拆出，仅报道引文，非《智斗鼠》完整唱词；文件：sources/02_clean/c03_b03_zhi_dou_shu_yin_zi.txt
+c04,02_clean 我的家乡在南京（逐句一行）,https://www.bilibili.com/video/BV13oX6YrEps,唱词·清洗对齐,已生成,2026-10-08,自 b04 拆出；文件：sources/02_clean/c04_b04_wo_de_jia_xiang.txt
+c05,02_clean 机房苦（逐句一行）,https://www.bilibili.com/video/BV1rC4y1c7GC,唱词·清洗对齐,已生成,2026-10-08,自 b05 拆出，白局代表曲目《机房苦》全文；文件：sources/02_clean/c05_b05_jifangk.txt
+b06,南京白局《金陵游》（B站字幕全抄）,https://www.bilibili.com/video/BV11R2xBeEWt,唱词,已抓取,2026-10-08,B站·白局新声社官方账号；《金陵游》唱词全文由用户手动复制字幕；B站反爬无法 GET，字幕经用户手动抄出留痕；文件：sources/01_raw/b06_bili_jinlingyou.txt
+c06,02_clean 金陵游（逐句一行）,https://www.bilibili.com/video/BV11R2xBeEWt,唱词·清洗对齐,已生成,2026-10-08,自 b06 拆出，白局描绘南京风景与遗迹曲目；文件：sources/02_clean/c06_b06_jinlingyou.txt
+k06,维基·朱雀桥词条,https://zh.wikipedia.org/zh-hans/%E6%9C%B1%E9%9B%80%E6%A1%A5,背景,已抓取,2026-10-08,维基百科（网络层无法直接 GET，正文经用户手动复制）；朱雀桥史实用于知识卡；文件：sources/03_knowledge/k06_wiki_zhuqueqiao.txt
+k07,维基·乌衣巷词条,https://zh.wikipedia.org/zh-hans/%E4%B9%8C%E8%A1%A3%E5%B7%B7,背景,已抓取,2026-10-08,维基百科（网络层无法直接 GET，正文经用户手动复制）；乌衣巷史实与刘禹锡《乌衣巷》用于知识卡；文件：sources/03_knowledge/k07_wiki_wuyixiang.txt
+k08,维基·白鹭洲公园词条,https://zh.wikipedia.org/zh-hans/%E7%99%BD%E9%B9%8E%E6%B4%8E%E5%85%AC%E5%9B%AD,背景,已抓取,2026-10-08,维基百科（网络层无法直接 GET，正文经用户手动复制）；白鹭洲公园史实与李白《登金陵凤凰台》用于知识卡；文件：sources/03_knowledge/k08_wiki_bailuzhou.txt
+k09,维基·媚香楼词条,https://zh.wikipedia.org/zh-hans/%E8%93%9C%E9%A6%99%E6%A8%82,背景,已抓取,2026-10-08,维基百科（网络层无法直接 GET，正文经用户手动复制）；媚香楼（李香君故居）史实与《桃花扇》用于知识卡；文件：sources/03_knowledge/k09_wiki_meixianglou.txt

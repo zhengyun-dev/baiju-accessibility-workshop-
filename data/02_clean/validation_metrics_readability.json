@@ -1,0 +1,31 @@
+{
+  "机房苦(c05)": {
+    "originalHardRate": "4.6%",
+    "plainHardRate": "0%",
+    "hardDropPercent": "100%",
+    "pass": "yes",
+    "hit": [
+      "坐板疮",
+      "削灵",
+      "靸",
+      "烂鞋头儿",
+      "茅草桩",
+      "拎桶儿",
+      "腰子箩",
+      "老菱",
+      "鸡头果儿",
+      "焦头鸡"
+    ]
+  },
+  "金陵游(c06)": {
+    "originalHardRate": "2.3%",
+    "plainHardRate": "0%",
+    "hardDropPercent": "100%",
+    "pass": "yes",
+    "hit": [
+      "马头墙",
+      "画舫",
+      "呱呱叫"
+    ]
+  }
+}

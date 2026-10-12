@@ -1,0 +1,33 @@
+{
+  "note": "机房苦 原文 vs 白话 难词率对比（阶段1 落地证据，10.08）",
+  "metric": {
+    "originalHardRate": "2.9%",
+    "plainHardRate": "0%",
+    "hardDropPercent": "100%",
+    "originalAvgSentenceLen": 7.1,
+    "plainAvgSentenceLen": 70,
+    "pass": "yes"
+  },
+  "detail": {
+    "original": {
+      "total": 240,
+      "hard": 7,
+      "proper": 3,
+      "hardWords": [
+        "坐板疮",
+        "削灵",
+        "靸",
+        "烂鞋头儿",
+        "茅草桩",
+        "拎桶儿",
+        "腰子箩"
+      ]
+    },
+    "plain": {
+      "total": 70,
+      "hard": 0,
+      "proper": 1,
+      "hardWords": []
+    }
+  }
+}

@@ -1,0 +1,723 @@
+{
+  "note": "《机房苦》完整链路验证报告（10.08 阶段1 收口）",
+  "parse_text": {
+    "segmenter": "nodejieba",
+    "sentenceCount": 34,
+    "parsed": [
+      {
+        "sentence": "机房啊不好做",
+        "words": [
+          "机房",
+          "啊",
+          "不好",
+          "做"
+        ],
+        "dialectHits": [
+          "机房"
+        ]
+      },
+      {
+        "sentence": "这几天又被那坐板疮来磨啊",
+        "words": [
+          "这",
+          "几天",
+          "又",
+          "被",
+          "那",
+          "坐",
+          "板",
+          "疮",
+          "来",
+          "磨",
+          "啊"
+        ],
+        "dialectHits": [
+          "坐板疮"
+        ]
+      },
+      {
+        "sentence": "三万六千头儿缎",
+        "words": [
+          "三万",
+          "六千",
+          "头儿",
+          "缎"
+        ],
+        "dialectHits": []
+      },
+      {
+        "sentence": "老板叫我七天织一个",
+        "words": [
+          "老板",
+          "叫",
+          "我",
+          "七天",
+          "织",
+          "一个"
+        ],
+        "dialectHits": []
+      },
+      {
+        "sentence": "怎奈我疼痛一天只能绞上几十梭",
+        "words": [
+          "怎奈",
+          "我",
+          "疼痛",
+          "一天",
+          "只能",
+          "绞上",
+          "几十",
+          "梭"
+        ],
+        "dialectHits": []
+      },
+      {
+        "sentence": "那焦头鸡的老板还要天天催生活",
+        "words": [
+          "那",
+          "焦头",
+          "鸡",
+          "的",
+          "老板",
+          "还要",
+          "天天",
+          "催",
+          "生活"
+        ],
+        "dialectHits": [
+          "焦头鸡"
+        ]
+      },
+      {
+        "sentence": "我恨上一声爹",
+        "words": [
+          "我",
+          "恨",
+          "上",
+          "一声",
+          "爹"
+        ],
+        "dialectHits": []
+      },
+      {
+        "sentence": "怨啊一声娘",
+        "words": [
+          "怨",
+          "啊",
+          "一声",
+          "娘"
+        ],
+        "dialectHits": []
+      },
+      {
+        "sentence": "你们不该把儿送去做机房",
+        "words": [
+          "你们",
+          "不该",
+          "把儿",
+          "送",
+          "去",
+          "做",
+          "机房"
+        ],
+        "dialectHits": [
+          "机房"
+        ]
+      },
+      {
+        "sentence": "冬天不能烤火",
+        "words": [
+          "冬天",
+          "不能",
+          "烤火"
+        ],
+        "dialectHits": []
+      },
+      {
+        "sentence": "夏天不能乘凉",
+        "words": [
+          "夏天",
+          "不能",
+          "乘凉"
+        ],
+        "dialectHits": []
+      },
+      {
+        "sentence": "我不是下土半截儿",
+        "words": [
+          "我",
+          "不是",
+          "下",
+          "土",
+          "半截儿"
+        ],
+        "dialectHits": []
+      },
+      {
+        "sentence": "就是头顶中梁儿",
+        "words": [
+          "就是",
+          "头顶",
+          "中",
+          "梁",
+          "儿"
+        ],
+        "dialectHits": []
+      },
+      {
+        "sentence": "初二、十六当荤",
+        "words": [
+          "初二",
+          "、",
+          "十六",
+          "当",
+          "荤"
+        ],
+        "dialectHits": []
+      },
+      {
+        "sentence": "八块肉",
+        "words": [
+          "八块",
+          "肉"
+        ],
+        "dialectHits": []
+      },
+      {
+        "sentence": "切的削灵有纸薄",
+        "words": [
+          "切",
+          "的",
+          "削",
+          "灵",
+          "有",
+          "纸",
+          "薄"
+        ],
+        "dialectHits": [
+          "削灵"
+        ]
+      },
+      {
+        "sentence": "遇到一阵狂风就刮到了北极阁",
+        "words": [
+          "遇到",
+          "一阵",
+          "狂风",
+          "就",
+          "刮",
+          "到",
+          "了",
+          "北极",
+          "阁"
+        ],
+        "dialectHits": []
+      },
+      {
+        "sentence": "我靸了一双烂鞋头儿追也追不着",
+        "words": [
+          "我",
+          "靸",
+          "了",
+          "一双",
+          "烂",
+          "鞋",
+          "头儿",
+          "追",
+          "也",
+          "追",
+          "不",
+          "着"
+        ],
+        "dialectHits": [
+          "烂鞋头儿",
+          "靸"
+        ]
+      },
+      {
+        "sentence": "碰到了茅草桩",
+        "words": [
+          "碰到",
+          "了",
+          "茅草",
+          "桩"
+        ],
+        "dialectHits": [
+          "茅草桩"
+        ]
+      },
+      {
+        "sentence": "哎呀",
+        "words": [
+          "哎呀"
+        ],
+        "dialectHits": []
+      },
+      {
+        "sentence": "戳破了我的脚",
+        "words": [
+          "戳破",
+          "了",
+          "我",
+          "的",
+          "脚"
+        ],
+        "dialectHits": []
+      },
+      {
+        "sentence": "连忙赶回来",
+        "words": [
+          "连忙",
+          "赶回来"
+        ],
+        "dialectHits": []
+      },
+      {
+        "sentence": "揭开锅盖看",
+        "words": [
+          "揭开",
+          "锅盖",
+          "看"
+        ],
+        "dialectHits": []
+      },
+      {
+        "sentence": "哟",
+        "words": [
+          "哟"
+        ],
+        "dialectHits": []
+      },
+      {
+        "sentence": "连汤都喝不着啊",
+        "words": [
+          "连",
+          "汤",
+          "都",
+          "喝",
+          "不",
+          "着",
+          "啊"
+        ],
+        "dialectHits": []
+      },
+      {
+        "sentence": "朋友劝我改行",
+        "words": [
+          "朋友",
+          "劝",
+          "我",
+          "改行"
+        ],
+        "dialectHits": []
+      },
+      {
+        "sentence": "我没得生意做",
+        "words": [
+          "我",
+          "没",
+          "得",
+          "生意",
+          "做"
+        ],
+        "dialectHits": []
+      },
+      {
+        "sentence": "肩背着拎桶儿",
+        "words": [
+          "肩",
+          "背着",
+          "拎",
+          "桶",
+          "儿"
+        ],
+        "dialectHits": [
+          "拎桶儿"
+        ]
+      },
+      {
+        "sentence": "手拐腰子箩",
+        "words": [
+          "手",
+          "拐",
+          "腰子",
+          "箩"
+        ],
+        "dialectHits": [
+          "腰子箩"
+        ]
+      },
+      {
+        "sentence": "我天天到夫子庙",
+        "words": [
+          "我",
+          "天天",
+          "到",
+          "夫子庙"
+        ],
+        "dialectHits": []
+      },
+      {
+        "sentence": "就蹲在那奇芳阁",
+        "words": [
+          "就",
+          "蹲",
+          "在",
+          "那",
+          "奇",
+          "芳",
+          "阁"
+        ],
+        "dialectHits": []
+      },
+      {
+        "sentence": "卖热老菱哦",
+        "words": [
+          "卖",
+          "热",
+          "老",
+          "菱",
+          "哦"
+        ],
+        "dialectHits": [
+          "老菱"
+        ]
+      },
+      {
+        "sentence": "卖热老菱哦",
+        "words": [
+          "卖",
+          "热",
+          "老",
+          "菱",
+          "哦"
+        ],
+        "dialectHits": [
+          "老菱"
+        ]
+      },
+      {
+        "sentence": "代卖鸡头果儿啊",
+        "words": [
+          "代卖",
+          "鸡头",
+          "果儿",
+          "啊"
+        ],
+        "dialectHits": [
+          "鸡头果儿"
+        ]
+      }
+    ]
+  },
+  "translate_to_plain": {
+    "translator": "Skill 由 Agnes 模型实际执行（这里是离线对照）",
+    "sentenceCount": 34,
+    "translated": [
+      {
+        "sentence": "机房啊不好做",
+        "plain": "机房啊不好做",
+        "translator": "offline-demo"
+      },
+      {
+        "sentence": "这几天又被那坐板疮来磨啊",
+        "plain": "这几天又被那皮肤病来磨啊",
+        "translator": "offline-demo"
+      },
+      {
+        "sentence": "三万六千头儿缎",
+        "plain": "三万六千头儿缎",
+        "translator": "offline-demo"
+      },
+      {
+        "sentence": "老板叫我七天织一个",
+        "plain": "老板叫我七天织一个",
+        "translator": "offline-demo"
+      },
+      {
+        "sentence": "怎奈我疼痛一天只能绞上几十梭",
+        "plain": "怎奈我疼痛一天只能绞上几十梭",
+        "translator": "offline-demo"
+      },
+      {
+        "sentence": "那焦头鸡的老板还要天天催生活",
+        "plain": "那闷头不说话的老板的老板还要天天催生活",
+        "translator": "offline-demo"
+      },
+      {
+        "sentence": "我恨上一声爹",
+        "plain": "我恨上一声爹",
+        "translator": "offline-demo"
+      },
+      {
+        "sentence": "怨啊一声娘",
+        "plain": "怨啊一声娘",
+        "translator": "offline-demo"
+      },
+      {
+        "sentence": "你们不该把儿送去做机房",
+        "plain": "你们不该把儿送去做机房",
+        "translator": "offline-demo"
+      },
+      {
+        "sentence": "冬天不能烤火",
+        "plain": "冬天不能烤火",
+        "translator": "offline-demo"
+      },
+      {
+        "sentence": "夏天不能乘凉",
+        "plain": "夏天不能乘凉",
+        "translator": "offline-demo"
+      },
+      {
+        "sentence": "我不是下土半截儿",
+        "plain": "我不是下土半截儿",
+        "translator": "offline-demo"
+      },
+      {
+        "sentence": "就是头顶中梁儿",
+        "plain": "就是头顶中梁儿",
+        "translator": "offline-demo"
+      },
+      {
+        "sentence": "初二、十六当荤",
+        "plain": "初二、十六当荤",
+        "translator": "offline-demo"
+      },
+      {
+        "sentence": "八块肉",
+        "plain": "八块肉",
+        "translator": "offline-demo"
+      },
+      {
+        "sentence": "切的削灵有纸薄",
+        "plain": "切的薄薄的有纸薄",
+        "translator": "offline-demo"
+      },
+      {
+        "sentence": "遇到一阵狂风就刮到了北极阁",
+        "plain": "遇到一阵狂风就刮到了北极阁",
+        "translator": "offline-demo"
+      },
+      {
+        "sentence": "我靸了一双烂鞋头儿追也追不着",
+        "plain": "我拖了一双破旧的鞋追也追不着",
+        "translator": "offline-demo"
+      },
+      {
+        "sentence": "碰到了茅草桩",
+        "plain": "碰到了茅草柱子",
+        "translator": "offline-demo"
+      },
+      {
+        "sentence": "哎呀",
+        "plain": "哎呀",
+        "translator": "offline-demo"
+      },
+      {
+        "sentence": "戳破了我的脚",
+        "plain": "戳破了我的脚",
+        "translator": "offline-demo"
+      },
+      {
+        "sentence": "连忙赶回来",
+        "plain": "连忙赶回来",
+        "translator": "offline-demo"
+      },
+      {
+        "sentence": "揭开锅盖看",
+        "plain": "揭开锅盖看",
+        "translator": "offline-demo"
+      },
+      {
+        "sentence": "哟",
+        "plain": "哟",
+        "translator": "offline-demo"
+      },
+      {
+        "sentence": "连汤都喝不着啊",
+        "plain": "连汤都喝不着啊",
+        "translator": "offline-demo"
+      },
+      {
+        "sentence": "朋友劝我改行",
+        "plain": "朋友劝我改行",
+        "translator": "offline-demo"
+      },
+      {
+        "sentence": "我没得生意做",
+        "plain": "我没得生意做",
+        "translator": "offline-demo"
+      },
+      {
+        "sentence": "肩背着拎桶儿",
+        "plain": "肩背着提桶",
+        "translator": "offline-demo"
+      },
+      {
+        "sentence": "手拐腰子箩",
+        "plain": "手拐腰间挂的箩筐",
+        "translator": "offline-demo"
+      },
+      {
+        "sentence": "我天天到夫子庙",
+        "plain": "我天天到夫子庙",
+        "translator": "offline-demo"
+      },
+      {
+        "sentence": "就蹲在那奇芳阁",
+        "plain": "就蹲在那奇芳阁",
+        "translator": "offline-demo"
+      },
+      {
+        "sentence": "卖热老菱哦",
+        "plain": "卖热菱角哦",
+        "translator": "offline-demo"
+      },
+      {
+        "sentence": "卖热老菱哦",
+        "plain": "卖热菱角哦",
+        "translator": "offline-demo"
+      },
+      {
+        "sentence": "代卖鸡头果儿啊",
+        "plain": "代卖炒货零食啊",
+        "translator": "offline-demo"
+      }
+    ]
+  },
+  "gen_knowledge_cards": {
+    "note": "Skill 由 Agnes 模型实际执行（这里是离线对照）",
+    "totalKeywords": 4,
+    "hitKeywords": 4,
+    "cards": [
+      {
+        "keyword": "夫子庙",
+        "cardCount": 4,
+        "status": "hit",
+        "cards": [
+          {
+            "topic": "秦淮河",
+            "source": "k01"
+          },
+          {
+            "topic": "夫子庙",
+            "source": "k02"
+          },
+          {
+            "topic": "朱雀桥（六朝秦淮浮桥）",
+            "source": "k06"
+          },
+          {
+            "topic": "白鹭洲公园",
+            "source": "k08"
+          }
+        ]
+      },
+      {
+        "keyword": "奇芳阁",
+        "cardCount": 0,
+        "status": "miss",
+        "cards": []
+      },
+      {
+        "keyword": "鸡头果儿",
+        "cardCount": 0,
+        "status": "miss",
+        "cards": []
+      },
+      {
+        "keyword": "茅草桩",
+        "cardCount": 0,
+        "status": "miss",
+        "cards": []
+      }
+    ]
+  },
+  "verify_sources": {
+    "total": 4,
+    "traceableCount": 4,
+    "traceableRate": "100%",
+    "pass": "yes",
+    "source": "../../../sources/sources_manifest.csv",
+    "verified": [
+      {
+        "topic": "秦淮河",
+        "source": "k01",
+        "traceable": "yes",
+        "urls": [
+          "https://www.ihchina.cn/project_details/13721/"
+        ],
+        "note": "来源已登记"
+      },
+      {
+        "topic": "夫子庙",
+        "source": "k02",
+        "traceable": "yes",
+        "urls": [
+          "https://www.baike.com/wikiid/1550383644694897492"
+        ],
+        "note": "来源已登记"
+      },
+      {
+        "topic": "朱雀桥（六朝秦淮浮桥）",
+        "source": "k06",
+        "traceable": "yes",
+        "urls": [
+          "https://zh.wikipedia.org/zh-hans/%E6%9C%B1%E9%9B%80%E6%A1%A5"
+        ],
+        "note": "来源已登记"
+      },
+      {
+        "topic": "白鹭洲公园",
+        "source": "k08",
+        "traceable": "yes",
+        "urls": [
+          "https://zh.wikipedia.org/zh-hans/%E7%99%BD%E9%B9%8E%E6%B4%8E%E5%85%AC%E5%9B%AD"
+        ],
+        "note": "来源已登记"
+      }
+    ]
+  },
+  "readability_score": {
+    "metric": {
+      "originalHardRate": "4.6%",
+      "plainHardRate": "0%",
+      "hardDropPercent": "100%",
+      "originalAvgSentenceLen": 7.1,
+      "plainAvgSentenceLen": 7.4,
+      "pass": "yes"
+    },
+    "detail": {
+      "original": {
+        "total": 240,
+        "hard": 11,
+        "harmony": 0,
+        "hardWords": [
+          "坐板疮",
+          "削灵",
+          "靸",
+          "烂鞋头儿",
+          "茅草桩",
+          "拎桶儿",
+          "腰子箩",
+          "老菱",
+          "鸡头果儿",
+          "焦头鸡"
+        ]
+      },
+      "plain": {
+        "total": 249,
+        "hard": 0,
+        "harmony": 0,
+        "hardWords": []
+      }
+    },
+    "wordlistSource": "data/dialect_words.json"
+  },
+  "metrics": {
+    "traceableRate": "100%",
+    "hardDropPercent": "100%",
+    "allPass": true
+  }
+}

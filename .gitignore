@@ -1,0 +1,14 @@
+# 依赖 / 构建产物
+node_modules/
+dist/
+build/
+*.log
+
+# 打包产物（参赛 ZIP 不入库，避免 200MB 进 git）
+*.zip
+submissions/*.zip
+
+# 本地 / 编辑器
+.DS_Store
+*.local
+.env

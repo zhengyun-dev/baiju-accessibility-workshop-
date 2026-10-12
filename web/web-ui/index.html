@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>白局·无障碍唱词工坊</title>
+<style>
+  /* 默认主题：远山黛水（新中式最稳重）—— 米白+墨褐+原木色 */
+  :root, body[data-theme="yuanshan"] {
+    --bg: #f4f1eb; --card: #fdfcf9; --ink: #1c1813; --muted: #7a6f60;
+    --accent: #4a3f30; --good: #5a7a5a; --bad: #a06050; --line: #e2dccc;
+    --pattern: url("patterns/yuanshan.svg");
+  }
+  body[data-theme="dai"] { /* 黛蓝雅韵 —— 米白+靛青+原木 */
+    --bg: #f3f5f7; --card: #fbfcfd; --ink: #142033; --muted: #6a7a8f;
+    --accent: #1e3a5f; --good: #4a7a6a; --bad: #a05a50; --line: #dce3eb;
+    --pattern: url("patterns/dai.svg");
+  }
+  body[data-theme="zhuhong"] { /* 朱红金辉 —— 米白+故宫红+暗金 */
+    --bg: #f7f2ed; --card: #fdfaf6; --ink: #2a1a12; --muted: #9a8a72;
+    --accent: #8b2a1a; --good: #5a7a4a; --bad: #a04030; --line: #e8ddd0;
+    --pattern: url("patterns/zhuhong.svg");
+  }
+  body[data-theme="qinglv"] { /* 青绿山水 —— 月白+石青+古铜 */
+    --bg: #f2f7f3; --card: #fafcf9; --ink: #1a2a24; --muted: #5a7a68;
+    --accent: #1f5f50; --good: #3a7a5a; --bad: #a04a40; --line: #d5e2d8;
+    --pattern: url("patterns/qinglv.svg");
+  }
+  body { --pat-op: .03; }
+  body[data-theme="dai"] { --pat-op: .06; }
+  body[data-theme="zhuhong"] { --pat-op: .02; }
+  body[data-theme="qinglv"] { --pat-op: .03; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+    font-family: "Noto Sans CJK SC", "Source Han Sans SC", "PingFang SC", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+    font-size: 17px; font-weight: 400; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+  body::before { content: ""; position: fixed; inset: 0; z-index: 0;
+    background-image: var(--pattern); background-size: 360px 180px; background-repeat: repeat;
+    opacity: var(--pat-op); pointer-events: none; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 88px 32px 100px; position: relative; z-index: 1; }
+  h1 { font-size: 30px; font-weight: 400; letter-spacing: .14em; margin: 0 0 16px; }
+  .sub { color: var(--muted); margin: 0; font-size: 15px; line-height: 1.9; }
+  .badge { display: inline-block; font-size: 11px; letter-spacing: .08em; padding: 3px 10px; border-radius: 100px;
+    background: color-mix(in srgb, var(--accent) 8%, transparent); color: var(--accent); margin-left: 10px; vertical-align: 4px; font-weight: 400; }
+  .panel { background: var(--card); border: 1px solid var(--line); border-radius: 16px;
+    padding: 36px; margin: 28px 0; box-shadow: 0 1px 2px rgba(0,0,0,.02); }
+  .themes { display: flex; flex-wrap: wrap; gap: 10px; margin: 32px 0 0; align-items: center; }
+  .themes .lbl { font-size: 12px; letter-spacing: .08em; color: var(--muted); margin-right: 8px; font-weight: 400; }
+  .swatch { width: 16px; height: 16px; border-radius: 50%; cursor: pointer;
+    border: 1.5px solid var(--line); display: inline-block; position: relative; }
+  .swatch.active { border-color: var(--accent); }
+  .swatch.active::after { content: ""; position: absolute; inset: -4px; border-radius: 50%; border: 1px solid var(--accent); opacity: .4; }
+  .swatch[data-t="yuanshan"] { background: linear-gradient(135deg,#8a7a68 0%,#ece6da 55%,#3a3228 100%); }
+  .swatch[data-t="dai"] { background: linear-gradient(135deg,#4a6a8f 0%,#e9edf2 55%,#1e3a5f 100%); }
+  .swatch[data-t="zhuhong"] { background: linear-gradient(135deg,#c9a86a 0%,#f3ece6 45%,#8b2a1a 100%); }
+  .swatch[data-t="qinglv"] { background: linear-gradient(135deg,#6a9a88 0%,#e8efe9 55%,#1f5f50 100%); }
+  button:disabled { opacity: .4; cursor: not-allowed; transform: none !important; box-shadow: none !important; }
+  .swatch { transition: transform .15s ease; }
+  .swatch:hover { transform: scale(1.15); }
+  .presets a { transition: opacity .15s; }
+  .presets a:hover { opacity: .75; }
+  .icobtn { display: inline-flex; align-items: center; gap: 8px; }
+  .icobtn svg { flex: none; }
+  label { display: block; font-size: 13px; color: var(--muted); margin-bottom: 10px; letter-spacing: .03em; font-weight: 400; }
+  textarea { width: 100%; min-height: 150px; resize: vertical; background: var(--bg); color: var(--ink);
+    border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; font-size: 15px; font-family: inherit; line-height: 1.8; font-weight: 400; }
+  textarea:focus { outline: none; border-color: var(--accent); }
+  .btns { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0 0; }
+  button { display: inline-flex; align-items: center; gap: 8px;
+    background: var(--accent); color: #fff; border: 0; border-radius: 100px;
+    padding: 11px 22px; font-size: 14px; font-weight: 400; cursor: pointer;
+    letter-spacing: .03em; transition: transform .18s cubic-bezier(.34,1.56,.64,1), box-shadow .18s, opacity .15s;
+    position: relative; overflow: hidden; }
+  button::before { content: ""; position: absolute; inset: 0; background: rgba(255,255,255,.08);
+    border-radius: 100px; transform: scaleX(0); transform-origin: left; transition: transform .3s ease; }
+  button:hover { transform: translateY(-1.5px) scale(1.02); box-shadow: 0 4px 16px rgba(0,0,0,.12); }
+  button:hover::before { transform: scaleX(1); }
+  button:active { transform: translateY(0) scale(.98); box-shadow: 0 2px 8px rgba(0,0,0,.10); transition: transform .08s; }
+  button.ghost { background: transparent; color: var(--accent); border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent); }
+  button.ghost:hover { background: color-mix(in srgb, var(--accent) 8%, transparent); border-color: var(--accent); }
+  button.ghost::before { background: color-mix(in srgb, var(--accent) 5%, transparent); }
+  .presets { font-size: 13px; color: var(--muted); margin: 6px 0 0; display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: center; font-weight: 400; }
+  .presets .plbl { color: var(--muted); letter-spacing: .03em; }
+  .presets a { color: var(--accent); cursor: pointer; font-weight: 400; }
+  .presets a:hover { text-decoration: underline; }
+  section { display: none; }
+  section.show { display: block; }
+  h2 { font-size: 13px; font-weight: 400; letter-spacing: .18em; margin: 0 0 24px; color: var(--muted); text-transform: uppercase; }
+  .secnum { color: var(--accent); font-weight: 600; margin-right: 10px; letter-spacing: 0; font-size: 13px; }
+  .kv { display: flex; flex-wrap: wrap; gap: 14px; margin: 0 0 28px; }
+  .kv .box { flex: 1 1 150px; background: var(--bg); border: 1px solid var(--line); border-radius: 12px; padding: 20px; }
+  .kv .box .n { font-size: 30px; font-weight: 300; letter-spacing: -.02em; }
+  .kv .box .t { font-size: 12px; color: var(--muted); margin-top: 8px; letter-spacing: .04em; font-weight: 400; }
+  .ok { color: var(--good); } .no { color: var(--bad); }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; font-weight: 400; }
+  th, td { text-align: left; padding: 12px 8px; border-bottom: 1px solid var(--line); vertical-align: top; font-weight: 400; }
+  th { color: var(--muted); font-weight: 400; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; }
+  .tag { display: inline-block; font-size: 12px; padding: 3px 10px; border-radius: 100px; margin: 2px 4px 2px 0; letter-spacing: .02em; font-weight: 400; }
+  .tag.hit { background: color-mix(in srgb, var(--good) 12%, var(--card)); color: var(--good); }
+  .tag.miss { background: color-mix(in srgb, var(--bad) 12%, var(--card)); color: var(--bad); }
+  .note { font-size: 13px; color: var(--muted); margin-top: 32px; font-weight: 400; line-height: 1.9; }
+  .card { border: 1px solid var(--line); border-radius: 12px; padding: 22px; margin: 14px 0;
+    background: var(--bg); font-size: 15px; font-weight: 400; line-height: 1.9; }
+  .card .ttl { font-weight: 500; color: var(--ink); font-size: 16px; letter-spacing: .02em; }
+  .card .src { font-size: 12px; color: var(--muted); margin-top: 10px; word-break: break-all; font-weight: 400; }
+  .trans { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .trans .col h3 { font-size: 11px; color: var(--muted); margin: 0 0 14px; letter-spacing: .1em; text-transform: uppercase; font-weight: 400; }
+  .trans .row { padding: 16px 18px; border-radius: 10px; background: var(--bg); margin-bottom: 10px;
+    border-left: 1px solid var(--line); font-size: 15px; line-height: 1.9; font-weight: 400; }
+  .trans .row.plain { border-left-color: var(--accent); }
+  .trans .row .dialect { color: var(--accent); font-weight: 500; }
+  .demo-flag { background: color-mix(in srgb, var(--accent) 6%, var(--card)); border: 1px solid color-mix(in srgb, var(--accent) 18%, transparent); color: var(--muted);
+    border-radius: 10px; padding: 14px 18px; font-size: 13px; font-weight: 400; line-height: 1.9; margin: 24px 0 0; }
+  .demo-flag strong { color: var(--accent); }
+  .empty { color: var(--muted); font-size: 14px; padding: 40px 0; text-align: center; font-weight: 400; }
+  .back { color: var(--accent); cursor: pointer; font-size: 13px; text-decoration: underline; }
+  @media (max-width: 640px) {
+    .trans { grid-template-columns: 1fr; }
+    .wrap { padding: 48px 16px 72px; }
+    .panel { padding: 20px; }
+    .kv .box { flex: 1 1 100%; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>白局 · 无障碍唱词工坊<span class="badge">演示版</span></h1>
+  <p class="sub">粘贴南京白局唱词，一键生成白话翻译、知识卡与可读性报告。为听障者与不懂南京话的游客、年轻人，把非遗唱词变成可读、可查、可信的内容。</p>
+
+  <div class="themes" role="group" aria-label="配色">
+    <span class="lbl">配色</span>
+    <span class="swatch active" data-t="yuanshan" title="远山黛水" aria-label="远山黛水"></span>
+    <span class="swatch" data-t="dai" title="黛蓝雅韵" aria-label="黛蓝雅韵"></span>
+    <span class="swatch" data-t="zhuhong" title="朱红金辉" aria-label="朱红金辉"></span>
+    <span class="swatch" data-t="qinglv" title="青绿山水" aria-label="青绿山水"></span>
+  </div>
+
+  <div class="panel">
+    <label for="lyric">唱词 · 逐句一行，可直接粘贴字幕</label>
+    <textarea id="lyric" placeholder="把唱词粘在这里，一行一句……"></textarea>
+    <div class="presets">
+      <span class="plbl">样例</span>
+      <a id="preset-jifangk" href="#">机房苦</a>
+      <a id="preset-jinlingyou" href="#">金陵游</a>
+      <a id="preset-shuohao" href="#">说好六千给一万</a>
+    </div>
+    <div class="btns">
+      <button id="run" class="icobtn">
+        <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5 L14 14"/></svg>
+        分析唱词</button>
+      <button id="runAll" class="ghost icobtn">
+        <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 8 H13 M10 5 L13 8 L10 11"/></svg>
+        一键全链路</button>
+      <button id="tts" class="ghost icobtn">
+        <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 6 H6 L9 3 V13 L6 10 H3 Z"/><path d="M11 6 C12 7 12 9 11 10"/><path d="M12.5 4.5 C14.5 6.5 14.5 9.5 12.5 11.5"/></svg>
+        朗读白话</button>
+      <button id="clear" class="ghost icobtn" style="color:var(--muted);border-color:color-mix(in srgb,var(--muted) 40%,transparent)">
+        <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 4 L12 12 M12 4 L4 12"/></svg>
+        清空</button>
+    </div>
+    <div class="demo-flag" id="demoFlag" style="display:none">
+      ② 白话翻译与 ③ 知识卡当前为<strong>离线演示模式</strong>（确定性替换 + 知识库匹配），不依赖任何 API key。
+      ① ④ ⑤ 为确定性计算，结果即最终结果。接入 Agnes 模型后可升级为 AI 生成。</div>
+  </div>
+
+  <section id="sec-parse" class="panel"><h2><span class="secnum">01</span>分句 · 方言词标记</h2><div class="empty">点「分析唱词」生成</div></section>
+  <section id="sec-translate" class="panel"><h2><span class="secnum">02</span>白话翻译 · 逐句对照</h2><div class="empty">待生成</div></section>
+  <section id="sec-cards" class="panel"><h2><span class="secnum">03</span>知识卡 · 典故与来源</h2><div class="empty">待生成</div></section>
+  <section id="sec-verify" class="panel"><h2><span class="secnum">04</span>来源核验</h2><div class="empty">待生成</div></section>
+  <section id="sec-read" class="panel"><h2><span class="secnum">05</span>可读性报告</h2><div class="empty">待生成</div></section>
+
+  <p class="note">全部素材与来源带公开 URL；拿不准的方言词含义标「待考」，不编造。词表 359 词，31 个粗俗词单列、不计入难词率。</p>
+</div>
+<script src="lib/dialect_data.js"></script>
+<script src="lib/kb_data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

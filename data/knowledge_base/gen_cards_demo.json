@@ -1,0 +1,20 @@
+# D10 工具③ gen_knowledge_cards · 跑通证据
+# 抓取日期: 2026-10-08 | 输入: sources/knowledge_base/nanjing_landmarks.md
+# 测试: examples/packages/hot-tool-plugin/test_kb.mjs
+
+## 行为确认（喂 4 关键词）
+
+| 关键词 | status | 命中卡数 | 命中卡 | 出处（带来源，合规） |
+|---|---|---|---|---|
+| 夫子庙 | hit | 2 | 秦淮河、夫子庙 | b01 / b04 / k04 |
+| 莫愁湖 | hit | 1 | 莫愁湖（以曲目《莫愁四弄》出现） | k02 |
+| 云锦机房 | hit | 2 | 云锦机房、秦淮河 | k04 / k05 / b01 / b04 |
+| 不存在的词 | miss | 0 | — | 正确降级，不编造 |
+
+## 设计要点（验证通过）
+1. 命中知识卡均带 `source` 字段（来源标注），满足规则 3.4。
+2. 未命中关键词 `status: miss`，不硬凑内容，满足"无来源降级待考"。
+3. 一张卡可被多个关键词命中（检索合理，非一对一）。
+
+## 复现
+node examples/packages/hot-tool-plugin/test_kb.mjs
