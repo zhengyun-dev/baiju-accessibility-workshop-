@@ -29,7 +29,7 @@
 | 类别 | 数量 | 位置 |
 |---|---|---|
 | 唱词原文（b 源） | 6 | `sources/01_raw/b01–b06` |
-| 唱词清洗逐句（c） | 6 | `sources/02_clean/c01–c06` |
+| 唱词清洗逐句（c） | 6 | `data/02_clean/c01–c06` |
 | 背景/典故素材（k 源） | 9 | `sources/03_knowledge/k01–k09` |
 | 知识卡 | 10 | `sources/knowledge_base/nanjing_landmarks.md` |
 | 南京方言词表 | 21 词 | `examples/packages/hot-tool-plugin/index.mjs` (DIALECT_WORDS) + `sources/dialect_words_supplement.md` |
@@ -61,7 +61,7 @@
 
 **降级逻辑验证（失败样例）**：喂一张 `source: "(无来源，待考)"` 的卡，④ 正确返回 `traceable: "no"` + `note: 无来源，降级"待考"`，不崩溃、不编造。
 
-证据：`sources/02_clean/validation_metrics.json`
+证据：`data/02_clean/validation_report_c05.json`（④ 100%）
 
 ---
 
@@ -79,11 +79,11 @@
 > **口径说明**：难词 = 原文中命中 ② 白话替换表（16 词）的方言词；白话版 = 替换后残留命中数。①④⑤ 与 ② 用同一套替换表，三处数字一致。
 > 歇后语谐音双关词（`针好`/`顶好`）单列 `harmony`，不计难词；"么得" 是难词（游客真看不懂）。
 
-证据：`sources/02_clean/validation_metrics_readability.json`（② 口径，c05/c06）+ `sources/02_clean/validation_metrics.json`（旧子串口径，存档）
+证据：`data/02_clean/validation_metrics_readability.json`（② 替换表口径，c05/c06）
 
 ---
 
-## 5. 三类测试样例（`sources/04_tests/three_category_tests.json`）
+## 5. 三类测试样例（`data/04_tests/three_category_tests.json`）
 
 | 类别 | 输入 | 期望 | 实际 |
 |---|---|---|---|
@@ -105,11 +105,11 @@
 
 | 文件 | 内容 |
 |---|---|
-| `sources/02_clean/validation_metrics.json` | 指标①② 原始数据（10 卡溯源 + 2 组难词率） |
-| `sources/04_tests/three_category_tests.json` | 三类测试样例结果 |
-| `sources/02_clean/validation_report_c05.json` | 机房苦全链路（①→⑤）完整运行记录 |
-| `sources/02_clean/translate_demo_c01.json` | ② 真实 Agnes 3.0-flash 翻译输出（南京美景） |
-| `sources/04_tests/gen_cards_demo.json` | ③ 知识库卡片命中样例 |
+| `data/02_clean/validation_metrics.json` | 指标①② 原始数据（10 卡溯源 + 2 组难词率） |
+| `data/04_tests/three_category_tests.json` | 三类测试样例结果 |
+| `data/02_clean/validation_report_c05.json` | 机房苦全链路（①→⑤）完整运行记录 |
+| `data/02_clean/translate_demo_c01.json` | ② 真实 Agnes 3.0-flash 翻译输出（南京美景） |
+| `data/04_tests/gen_cards_demo.json` | ③ 知识库卡片命中样例 |
 
 ---
 

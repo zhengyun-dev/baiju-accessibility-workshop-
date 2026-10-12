@@ -6,7 +6,7 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 const _here = path.dirname(fileURLToPath(import.meta.url))
 // 两树通用：向上找 c05 文件（仓库 sources/ 或 AGH 树 sources/）
-const _c05 = ['../sources/02_clean/c05_b05_jifangk.txt','../../../sources/02_clean/c05_b05_jifangk.txt']
+const _c05 = ['../data/02_clean/c05_b05_jifangk.txt','../sources/02_clean/c05_b05_jifangk.txt','../../../sources/02_clean/c05_b05_jifangk.txt']
   .map((r)=>path.resolve(_here,r)).find((f)=>{ try{readFileSync(f);return true}catch{return false} })
 const _out = _c05.replace(/c05_b05_jifangk.txt$/,'../04_tests/three_category_tests.json')
 const _outDir = _c05.replace(/c05_b05_jifangk.txt$/,'../04_tests/')
@@ -73,6 +73,6 @@ const REPL = {'坐板疮':'皮肤病','削灵':'薄薄的','靸':'拖','烂鞋�
 console.log(JSON.stringify(results, null, 2))
 
 // 存结果
-mkdirSync('../sources/04_tests', { recursive: true })
-writeFileSync('../sources/04_tests/three_category_tests.json', JSON.stringify(results, null, 2))
-console.log('\n✅ 三类测试样例已存 sources/04_tests/three_category_tests.json')
+const _outDir = _c05.replace(/c05_b05_jifangk.txt$/,'../04_tests/'); mkdirSync(_outDir, { recursive: true })
+writeFileSync(_c05.replace(/c05_b05_jifangk.txt$/,'../04_tests/three_category_tests.json'), JSON.stringify(results, null, 2))
+console.log('\n✅ 三类测试样例已存（相对 c05 的 ../04_tests/）')

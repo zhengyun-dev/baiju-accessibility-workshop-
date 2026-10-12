@@ -3,7 +3,7 @@ import { readFileSync, writeFileSync } from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 const _here = path.dirname(fileURLToPath(import.meta.url))
-const _c05 = ['../sources/02_clean/c05_b05_jifangk.txt','../../../sources/02_clean/c05_b05_jifangk.txt']
+const _c05 = ['../data/02_clean/c05_b05_jifangk.txt','../sources/02_clean/c05_b05_jifangk.txt','../../../sources/02_clean/c05_b05_jifangk.txt']
   .map((r)=>path.resolve(_here,r)).find((f)=>{ try{readFileSync(f);return true}catch{return false} })
 const _report = _c05.replace('c05_b05_jifangk.txt','validation_report_c05.json')
 

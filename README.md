@@ -21,8 +21,8 @@
 
 | 指标 | 目标 | 实测 | 数据源 |
 |---|---|---|---|
-| 知识卡溯源率 | ≥ 80% | **100%**（10/10 张全可溯源） | `data/02_clean/validation_metrics.json` |
-| 白话版难词率下降 | > 50% | **机房苦 100% / 金陵游 100%** | `data/02_clean/validation_metrics_readability.json` |
+| 知识卡溯源率 | ≥ 80% | **100%**（10/10 张全可溯源） | `data/02_clean/validation_report_c05.json`（④ 100%） |
+| 白话版难词率下降 | > 50% | **机房苦 100% / 金陵游 100%** | `data/02_clean/validation_metrics_readability.json`（② 替换表口径） |
 
 ## 数据集
 
