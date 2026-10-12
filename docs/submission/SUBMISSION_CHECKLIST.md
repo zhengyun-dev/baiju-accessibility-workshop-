@@ -6,8 +6,8 @@
 
 ## 仓库
 
-- **GitHub 仓库**：<https://github.com/zhengyun-dev/baiju-accessibility-workshop>
-- 状态：已推 main（65 文件，约 620KB）。⚠ 请确认仓库名末尾无多余点；若实际带尾点请在 GitHub Settings→Rename 去掉。
+- **GitHub 仓库**：<https://github.com/zhengyun-dev/baiju-accessibility-workshop->（仓库名末尾带一个 `-`，已确认）
+- 状态：已推 main。
 
 ## 待你补全的占位信息
 

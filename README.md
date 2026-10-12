@@ -1,6 +1,6 @@
 # 南京白局·无障碍唱词工坊
 
-> **仓库**：<https://github.com/zhengyun-dev/baiju-accessibility-workshop>（⚠ 请确认仓库名末尾无多余点；若实际带尾点请 Rename）
+> **仓库**：<https://github.com/zhengyun-dev/baiju-accessibility-workshop->
 >
 > 濒危非遗「南京白局」唱词无障碍工坊：Agnes Harness (AGH) 5 能力把南京方言唱词转成**看得懂的白话 + 带 URL 的典故知识卡 + 可读性报告**，服务听障与外地游客；双硬指标达标（溯源率 100%、难词率下降 100%），全程合规 3.4。
 
