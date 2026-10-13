@@ -27,7 +27,7 @@
 - 工具：④ verify_sources；证据：`sources/02_clean/validation_report_c05.json`
 
 ### 指标 B：难词率下降（白话版 < 原文 50%）
-- **实测：《机房苦》原文 2.9% → 白话 0%，下降 100%**
+- **实测：《机房苦》原文 4.6% → 白话 0%，下降 100%**
 - 工具：⑤ readability_score；**词表外置**到 `plugin/data/dialect_words.json`（新增方言词只改 JSON 不改代码），三层桶：
   - **难词（dialectWords）**：命中南京方言俚语（坐板疮/削灵/靸/腰子箩/么得…）→ 白话替换后命中≈0
   - **harmony（谐音双关）**：针好/顶好，本意游客可懂，**不计难词**
