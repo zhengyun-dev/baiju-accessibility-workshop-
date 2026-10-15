@@ -1,0 +1,24 @@
+=====================================================================
+【白局·有声金陵】提交用链接清单（组委会要求：视频只交链接）
+参赛编号 U202 ｜ 队伍 白局·有声金陵 ｜ 队长 郑云
+=====================================================================
+
+一、开源仓库（项目真实记录，可查证，公开无需登录）
+  仓库主页：
+  https://github.com/zhengyun-dev/baiju-accessibility-workshop-
+
+  提交记录页（"真实记录+发布日期"截图就截这里，带时间戳）：
+  https://github.com/zhengyun-dev/baiju-accessibility-workshop-/commits/main
+
+二、演示视频（组委会要求：仅提交链接，1 主 + 可选 1 备用；评审期间须有效、不得要求评委登录）
+  【视频主链接】
+  https://github.com/zhengyun-dev/baiju-accessibility-workshop-/blob/main/docs/demo_video/demo.mp4
+
+  【视频备用链接】
+  https://raw.githubusercontent.com/zhengyun-dev/baiju-accessibility-workshop-/main/docs/demo_video/demo.mp4
+
+三、注意事项（保证评审期间链接有效）
+  1. 仓库保持 public（公开），评审期间不要删除、不要设为 private。
+  2. 两个视频链接评委点开均无需登录你的账号。
+  3. 若改用 B 站等公开视频平台，把视频设为"公开/无需密码"，
+     取 B 站链接当主链接，本清单里的 GitHub raw 链接当备用链接。
