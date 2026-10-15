@@ -73,6 +73,6 @@ const REPL = {'坐板疮':'皮肤病','削灵':'薄薄的','靸':'拖','烂鞋�
 console.log(JSON.stringify(results, null, 2))
 
 // 存结果
-const _outDir = _c05.replace(/c05_b05_jifangk.txt$/,'../04_tests/'); mkdirSync(_outDir, { recursive: true })
+mkdirSync(_outDir, { recursive: true })
 writeFileSync(_c05.replace(/c05_b05_jifangk.txt$/,'../04_tests/three_category_tests.json'), JSON.stringify(results, null, 2))
 console.log('\n✅ 三类测试样例已存（相对 c05 的 ../04_tests/）')

@@ -3,9 +3,9 @@
     "input": "c05 机房苦（正常唱词）",
     "sentenceCount": 34,
     "metric_readability": {
-      "originalHardRate": "3.3%",
-      "plainHardRate": "0.4%",
-      "drop": "87.9%",
+      "originalHardRate": "4.6%",
+      "plainHardRate": "0%",
+      "drop": "100%",
       "pass": "yes"
     },
     "expect": "全链路正常，难词率下降 >50%"
@@ -15,7 +15,7 @@
     "metric_readability": {
       "originalHardRate": "12.5%",
       "plainHardRate": "0%",
-      "harmony": 1,
+      "harmony": 0,
       "hardWords": [
         "么得"
       ]

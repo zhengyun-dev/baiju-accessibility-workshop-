@@ -1,0 +1,30 @@
+【白局·有声金陵】提交材料对照表（组委会要求 3 项，逐项对应）
+参赛编号 U202 ｜ 队伍 白局·有声金陵 ｜ 队长 郑云
+=====================================================================
+
+① 说明文档 / README
+   - README.md                     （作品说明 + 提交信息 + 运行方式）
+   - docs/submission/WORK_DETAILS.md（5000 字以内作品详情）
+   - docs/submission/SUBMIT_SUMMARY.md（提交表单摘要）
+
+② 可复现部分（源码 + AGH 导出的 trace）
+   - 源码（可运行）：
+       plugin/index.mjs            ①④⑤ 三个确定性工具（parse_text / verify_sources / readability_score）
+       plugin/demo_all.mjs         ①→⑤ 全链路可复现脚本
+       skills/translate-to-plain/SKILL.md   ② Agnes Skill（白话翻译）
+       skills/gen-knowledge-cards/SKILL.md  ③ Agnes Skill（知识卡生成）
+   - AGH 导出的 trace（真实执行记录）：
+       data/02_clean/skill_trace/skill_trace_2_translate.txt   ② 白话翻译（含 skill_read / translator=agnes-3.0-flash）
+       data/02_clean/skill_trace/skill_trace_3_cards.txt       ③ 知识卡（含 skill_read + read 知识库）
+   - 执行记录索引：
+       docs/submission/AGH_EXECUTION_RECORDS.md   （说明 trace 在哪、怎么看、怎么复现）
+   - 复现命令：cd plugin && node demo_all.mjs && node test_3categories.mjs
+
+③ 3–5 分钟视频
+   - docs/demo_video/demo.mp4      （约 4 分 16 秒，落在 3–5 分钟区间）
+
+双硬指标（已实测，评审可直接跑 demo_all.mjs 复核）：
+   - 知识卡溯源率 100%
+   - 白话版难词率下降 100%（机房苦 4.6% → 0%）
+三类测试样例（normal / boundary / failed）：全部通过
+合规：全程标注来源、拿不准则"待考"不编造、提交材料无明文 Key/密码
